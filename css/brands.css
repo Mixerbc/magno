@@ -1,0 +1,1541 @@
+/* ==========================================================================
+   Identidad visual por franquicia — la página se siente como el logo
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&family=Cinzel:wght@700&family=Fraunces:opsz,wght@9..144,600..900&family=Great+Vibes&family=Orbitron:wght@700&family=Oswald:wght@600;700&display=swap");
+
+/* --- Tokens por marca -------------------------------------------------- */
+
+[data-brand="sherwood"] {
+  --brand-bg: #0a1a40;
+  --brand-surface: #10245a;
+  --brand-border: rgba(255, 255, 255, 0.16);
+  --brand-ink: #ffffff;
+  --brand-muted: #c9d2ea;
+  --brand-primary: #ffffff;
+  --brand-accent: #c8102e;
+  --brand-accent-hover: #e0203f;
+  --brand-on-accent: #ffffff;
+  --brand-glow: rgba(200, 16, 46, 0.35);
+  --brand-heading: "Fraunces", "Cooper Black", Georgia, serif;
+  --brand-display: "Fraunces", "Cooper Black", Georgia, serif;
+  --brand-title-tracking: 0;
+  --brand-radius: 10px;
+}
+
+[data-brand="wings-force"] {
+  --brand-bg: #070806;
+  --brand-surface: #12160e;
+  --brand-border: #3d4f30;
+  --brand-ink: #e8efe2;
+  --brand-muted: #a3b396;
+  --brand-primary: #4b7a32;
+  --brand-accent: #4b7a32;
+  --brand-accent-hover: #5e9440;
+  --brand-secondary: #c4122e;
+  --brand-on-accent: #f4f7ef;
+  --brand-glow: rgba(75, 122, 50, 0.35);
+  --brand-heading: "Black Ops One", "Oswald", sans-serif;
+  --brand-display: "Black Ops One", "Oswald", sans-serif;
+  --brand-title-tracking: 0.08em;
+  --brand-radius: 2px;
+}
+
+[data-brand="divino-cielo"] {
+  --brand-bg: #ffffff;
+  --brand-surface: #f3fbff;
+  --brand-border: #c5eaf8;
+  --brand-ink: #123044;
+  --brand-muted: #5a7384;
+  --brand-primary: #00aeef;
+  --brand-accent: #00aeef;
+  --brand-accent-hover: #34c4f6;
+  --brand-on-accent: #ffffff;
+  --brand-glow: rgba(0, 174, 239, 0.22);
+  --brand-heading: "Poppins", "Segoe UI", sans-serif;
+  --brand-display: "Great Vibes", cursive;
+  --brand-title-tracking: 0.02em;
+  --brand-radius: 18px;
+}
+
+[data-brand="konigs-bier"] {
+  --brand-bg: #3a0c0c;
+  --brand-surface: #4e1414;
+  --brand-border: #c5a028;
+  --brand-ink: #fff6e8;
+  --brand-muted: #e2c98a;
+  --brand-primary: #a81212;
+  --brand-accent: #c5a028;
+  --brand-accent-hover: #dcb84a;
+  --brand-on-accent: #1a1008;
+  --brand-glow: rgba(197, 160, 40, 0.35);
+  --brand-heading: "Cinzel", "Times New Roman", serif;
+  --brand-display: "Cinzel", "Times New Roman", serif;
+  --brand-title-tracking: 0.04em;
+  --brand-radius: 10px;
+}
+
+[data-brand="heavy-hungry"] {
+  --brand-bg: #050505;
+  --brand-surface: #121212;
+  --brand-border: #5a1010;
+  --brand-ink: #ffffff;
+  --brand-muted: #c9b0b0;
+  --brand-primary: #ff1a1a;
+  --brand-accent: #ff1a1a;
+  --brand-accent-hover: #ff4a4a;
+  --brand-on-accent: #ffffff;
+  --brand-glow: rgba(255, 26, 26, 0.42);
+  --brand-heading: "Anton", Impact, sans-serif;
+  --brand-display: "Anton", Impact, sans-serif;
+  --brand-title-tracking: 0.03em;
+  --brand-radius: 4px;
+}
+
+[data-brand="capitan-jack"] {
+  --brand-bg: #eef7fb;
+  --brand-surface: #ffffff;
+  --brand-border: #b7d7e8;
+  --brand-ink: #0a3a58;
+  --brand-muted: #4d6f84;
+  --brand-primary: #1a6bb5;
+  --brand-accent: #f15a24;
+  --brand-accent-hover: #ff7848;
+  --brand-on-accent: #ffffff;
+  --brand-glow: rgba(241, 90, 36, 0.25);
+  --brand-heading: "Oswald", "Arial Narrow", sans-serif;
+  --brand-display: "Oswald", "Arial Narrow", sans-serif;
+  --brand-title-tracking: 0.04em;
+  --brand-radius: 14px;
+}
+
+[data-brand="hai-sushi"] {
+  --brand-bg: #050505;
+  --brand-surface: #101410;
+  --brand-border: #4a6a1c;
+  --brand-ink: #f5f7f0;
+  --brand-muted: #b4c48a;
+  --brand-primary: #99cc33;
+  --brand-accent: #99cc33;
+  --brand-accent-hover: #b4e04a;
+  --brand-on-accent: #0a0a0a;
+  --brand-glow: rgba(153, 204, 51, 0.4);
+  --brand-heading: "Orbitron", "Segoe UI", sans-serif;
+  --brand-display: "Orbitron", "Segoe UI", sans-serif;
+  --brand-title-tracking: 0.1em;
+  --brand-radius: 14px;
+}
+
+[data-brand="tacos-atascados"] {
+  --brand-bg: #0c0706;
+  --brand-surface: #1c0c0a;
+  --brand-border: #7a1818;
+  --brand-ink: #fff4ea;
+  --brand-muted: #d7b39a;
+  --brand-primary: #e10613;
+  --brand-accent: #e10613;
+  --brand-accent-hover: #ff2a36;
+  --brand-on-accent: #ffffff;
+  --brand-glow: rgba(225, 6, 19, 0.4);
+  --brand-heading: "Anton", Impact, sans-serif;
+  --brand-display: "Anton", Impact, sans-serif;
+  --brand-title-tracking: 0.05em;
+  --brand-radius: 6px;
+}
+
+/* --- Base de página de marca ------------------------------------------- */
+
+.brand-page {
+  --color-bg: var(--brand-bg);
+  --color-bg-soft: var(--brand-surface);
+  --color-surface: var(--brand-surface);
+  --color-border: var(--brand-border);
+  --color-text: var(--brand-ink);
+  --color-text-muted: var(--brand-muted);
+  --color-primary-red: var(--brand-accent);
+  --color-primary-red-hover: var(--brand-accent-hover);
+  --color-accent: var(--brand-accent);
+  --color-accent-hover: var(--brand-accent-hover);
+  --color-primary-blue: var(--brand-primary);
+  --font-heading: var(--brand-heading);
+  --radius-sm: calc(var(--brand-radius) * 0.55);
+  --radius-md: var(--brand-radius);
+  --radius-lg: calc(var(--brand-radius) * 1.2);
+  background: var(--brand-bg);
+  overflow-x: hidden;
+  color: var(--brand-ink);
+}
+
+.brand-page .site-header,
+.brand-page .mobile-nav {
+  --font-heading: "Poppins", "Segoe UI", sans-serif;
+  font-family: var(--font-body);
+}
+
+.brand-page h1,
+.brand-page h2,
+.brand-page h3,
+.brand-page .brand-panel__title,
+.brand-page .contact-aside__value {
+  font-family: var(--brand-heading);
+  color: var(--brand-ink);
+}
+
+.brand-page .brand-hero__title {
+  font-family: var(--brand-display);
+  letter-spacing: var(--brand-title-tracking);
+  text-transform: uppercase;
+}
+
+.brand-page .lead,
+.brand-page .hero__subtitle {
+  color: var(--brand-muted);
+}
+
+.brand-page .eyebrow {
+  color: var(--brand-accent);
+}
+
+.brand-page .eyebrow::before {
+  background: var(--brand-accent);
+}
+
+.brand-hero__logo {
+  display: block;
+  width: min(100%, 16rem);
+  height: auto;
+  max-height: 7.5rem;
+  object-fit: contain;
+  object-position: left center;
+  margin: 0.35rem 0 1.1rem;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
+}
+
+.brand-page .btn--primary {
+  --btn-bg: var(--brand-accent);
+  --btn-color: var(--brand-on-accent);
+  --btn-border: var(--brand-accent);
+  --btn-hover-bg: var(--brand-accent-hover);
+  --btn-hover-color: var(--brand-on-accent);
+  box-shadow: 0 8px 22px var(--brand-glow);
+}
+
+.brand-page .site-header.is-scrolled::after,
+.brand-page .site-header.is-solid::after {
+  background: color-mix(in srgb, var(--brand-ink) 10%, transparent);
+}
+
+.brand-page .site-nav__link::after {
+  background: var(--brand-accent);
+}
+
+.brand-page .badge {
+  background: color-mix(in srgb, var(--brand-accent) 16%, transparent);
+  color: var(--brand-accent);
+  border: 1px solid color-mix(in srgb, var(--brand-accent) 40%, transparent);
+}
+
+.brand-page .brand-panel {
+  background: var(--brand-surface);
+  border: 1px solid var(--brand-border);
+  border-top: 3px solid var(--brand-accent);
+  color: var(--brand-ink);
+}
+
+.brand-page .benefit-list__icon {
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
+}
+
+.brand-page .benefit-list__item--toggle {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--brand-border) 70%, transparent);
+}
+
+.brand-page .benefit-list__item--toggle:last-child {
+  border-bottom: none;
+}
+
+.brand-page .benefit__summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0.35rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.brand-page .benefit__summary::-webkit-details-marker {
+  display: none;
+}
+
+.brand-page .benefit__summary .benefit-list__icon {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1), background 360ms ease;
+}
+
+.brand-page .benefit.is-open .benefit__summary .benefit-list__icon {
+  transform: rotate(45deg);
+}
+
+.brand-page .benefit__body {
+  overflow: hidden;
+}
+
+.brand-page .benefit__summary .benefit-list__title {
+  margin: 0;
+}
+
+.brand-page .benefit__summary:hover .benefit-list__title {
+  color: var(--brand-accent);
+}
+
+.brand-page .benefit .benefit-list__text {
+  margin: 0 0 0.9rem calc(2.5rem + 1rem + 0.35rem);
+  padding-right: 0.5rem;
+  line-height: 1.65;
+  color: var(--brand-muted);
+}
+
+.brand-page .contact-aside__card {
+  background: var(--brand-surface);
+  border-color: var(--brand-border);
+  border-left-color: var(--brand-accent);
+}
+
+.brand-page .contact-aside__label {
+  color: var(--brand-accent);
+}
+
+.brand-page .lead-form {
+  background: var(--brand-surface);
+  border-color: var(--brand-border);
+}
+
+.brand-page .placeholder-note {
+  border-color: color-mix(in srgb, var(--brand-accent) 45%, var(--brand-border));
+  background: var(--brand-surface);
+}
+
+.brand-page .section--surface {
+  background: color-mix(in srgb, var(--brand-surface) 82%, var(--brand-bg));
+  border-block-color: var(--brand-border);
+}
+
+.brand-page .cta-band__overlay {
+  background: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--brand-primary) 82%, black),
+    color-mix(in srgb, var(--brand-accent) 55%, black)
+  );
+}
+
+.brand-page .cta-band,
+.brand-page .cta-band__title,
+.brand-page .cta-band .eyebrow {
+  color: #fff;
+}
+
+.brand-page .cta-band .eyebrow {
+  color: color-mix(in srgb, var(--brand-accent) 40%, white);
+}
+
+.brand-page .site-footer {
+  background: color-mix(in srgb, var(--brand-bg) 70%, black);
+  color: var(--brand-muted);
+  border-top: 2px solid var(--brand-accent);
+}
+
+.brand-page .site-footer__brand-name,
+.brand-page .site-footer__links a,
+.brand-page .site-footer__bottom {
+  color: var(--brand-ink);
+}
+
+.brand-page .site-footer__title {
+  color: var(--brand-accent);
+}
+
+/* --- Tema claro: texto oscuro, hero claro, forms claros ---------------- */
+
+.brand-page--light .brand-hero,
+.brand-page--light .hero {
+  background: var(--brand-bg);
+  color: var(--brand-ink);
+}
+
+.brand-page--light .hero__media {
+  opacity: 0.22;
+}
+
+.brand-page--light .hero__overlay {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--brand-bg) 55%, transparent), var(--brand-bg) 92%),
+    linear-gradient(115deg, var(--brand-bg), color-mix(in srgb, var(--brand-accent) 14%, var(--brand-bg)));
+}
+
+.brand-page--light .brand-hero .hero__title,
+.brand-page--light .brand-hero .breadcrumb,
+.brand-page--light .brand-hero .hero__subtitle,
+.brand-page--light .breadcrumb a {
+  color: var(--brand-ink);
+}
+
+.brand-page--light .btn--outline {
+  --btn-color: var(--brand-ink);
+  --btn-border: var(--brand-primary);
+  --btn-hover-bg: color-mix(in srgb, var(--brand-primary) 12%, transparent);
+  --btn-hover-color: var(--brand-ink);
+}
+
+.brand-page--light .site-header::before,
+.brand-page--light .site-header.is-scrolled::before,
+.brand-page--light .site-header.is-solid::before,
+.brand-page--light .site-header.is-open::before {
+  background: color-mix(in srgb, var(--brand-bg) 88%, white);
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  box-shadow: 0 8px 24px rgba(16, 30, 40, 0.08);
+}
+
+.brand-page--light .site-nav {
+  background: transparent;
+}
+
+.brand-page--light .site-nav__link {
+  color: var(--brand-ink);
+}
+
+.brand-page--light .site-nav__link:hover,
+.brand-page--light .site-nav__link[aria-current="page"] {
+  color: var(--brand-primary);
+  background: transparent;
+}
+
+.brand-page--light .form-field input,
+.brand-page--light .form-field select,
+.brand-page--light .form-field textarea {
+  background: #fff;
+  color: var(--brand-ink);
+  border-color: var(--brand-border);
+}
+
+.brand-page--light .site-footer {
+  background: var(--brand-surface);
+  color: var(--brand-muted);
+}
+
+.brand-page--light .site-footer__brand-name,
+.brand-page--light .site-footer__links a {
+  color: var(--brand-ink);
+}
+
+.brand-page--dark .hero__media {
+  opacity: 0.42;
+}
+
+.brand-page--dark .hero__overlay {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--brand-bg) 28%, transparent), var(--brand-bg) 100%),
+    linear-gradient(115deg, var(--brand-bg), color-mix(in srgb, var(--brand-accent) 22%, transparent));
+}
+
+.brand-page--dark .brand-hero .hero__title,
+.brand-page--dark .brand-hero .breadcrumb,
+.brand-page--dark .breadcrumb a {
+  color: #fff;
+}
+
+.brand-page--dark .btn--outline {
+  --btn-color: #fff;
+  --btn-border: color-mix(in srgb, var(--brand-accent) 75%, white);
+  --btn-hover-bg: color-mix(in srgb, var(--brand-accent) 22%, transparent);
+  --btn-hover-color: #fff;
+}
+
+.brand-page--dark .form-field input,
+.brand-page--dark .form-field select,
+.brand-page--dark .form-field textarea {
+  background: color-mix(in srgb, var(--brand-bg) 80%, black);
+  color: var(--brand-ink);
+  border-color: var(--brand-border);
+}
+
+.brand-page--dark .badge {
+  color: #fff;
+}
+
+.brand-page--dark .site-footer__brand-name,
+.brand-page--dark .site-footer__links a {
+  color: #fff;
+}
+
+/* ====================================================================== */
+/* DIVINO CIELO — blanco + azul cielo                                     */
+/* ====================================================================== */
+
+[data-brand="divino-cielo"] {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 174, 239, 0.16), transparent 55%),
+    #ffffff;
+}
+
+[data-brand="divino-cielo"] .brand-hero__title {
+  text-transform: none;
+  font-weight: 400;
+  font-size: clamp(2.35rem, 6.2vw, 4.2rem);
+  line-height: 1.12;
+  color: #00aeef;
+}
+
+[data-brand="divino-cielo"] h2 {
+  color: #0a4a68;
+}
+
+[data-brand="divino-cielo"] .cta-band__overlay {
+  background: linear-gradient(120deg, #00aeef, #0077a8);
+}
+
+[data-brand="divino-cielo"] .brand-hero__logo {
+  max-height: 6.2rem;
+}
+
+/* ====================================================================== */
+/* WINGS FORCE — militar, verde olivo + rojo                              */
+/* ====================================================================== */
+
+[data-brand="wings-force"] {
+  background-color: #070806;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(75, 122, 50, 0.05) 10px,
+      rgba(75, 122, 50, 0.05) 11px
+    ),
+    radial-gradient(ellipse at 0% 0%, rgba(196, 18, 46, 0.22), transparent 46%),
+    radial-gradient(ellipse at 100% 80%, rgba(75, 122, 50, 0.2), transparent 50%);
+}
+
+[data-brand="wings-force"] .brand-hero {
+  background: #050604;
+}
+
+[data-brand="wings-force"] .hero__overlay {
+  background:
+    linear-gradient(180deg, rgba(7, 8, 6, 0.35), #070806 95%),
+    linear-gradient(120deg, rgba(75, 122, 50, 0.35), rgba(196, 18, 46, 0.22));
+}
+
+[data-brand="wings-force"] h2,
+[data-brand="wings-force"] .brand-hero__title {
+  color: #6aa34a;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+[data-brand="wings-force"] .eyebrow,
+[data-brand="wings-force"] .badge,
+[data-brand="wings-force"] .contact-aside__label,
+[data-brand="wings-force"] .site-footer__title {
+  color: #e23a4f;
+}
+
+[data-brand="wings-force"] .eyebrow::before {
+  background: #c4122e;
+}
+
+[data-brand="wings-force"] .btn--primary {
+  --btn-bg: #4b7a32;
+  --btn-border: #c4122e;
+  --btn-hover-bg: #5e9440;
+  border-width: 2px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+[data-brand="wings-force"] .btn--outline {
+  --btn-color: #ff6b73;
+  --btn-border: #c4122e;
+  --btn-hover-bg: rgba(196, 18, 46, 0.16);
+}
+
+[data-brand="wings-force"] .brand-panel,
+[data-brand="wings-force"] .lead-form,
+[data-brand="wings-force"] .contact-aside__card {
+  border-radius: 2px;
+  border: 1px solid #4b7a32;
+  box-shadow: inset 0 0 0 1px rgba(196, 18, 46, 0.35);
+}
+
+[data-brand="wings-force"] .section--surface {
+  border-block: 3px solid #c4122e;
+  background: #10150c;
+}
+
+[data-brand="wings-force"] .cta-band__overlay {
+  background: linear-gradient(120deg, #1c2e14, #4b7a32 55%, #7a101c);
+}
+
+/* ====================================================================== */
+/* SHERWOOD — escudo Union Jack: navy, rojo y blanco                      */
+/* ====================================================================== */
+
+[data-brand="sherwood"] {
+  --uj-navy: #0a1a40;
+  --uj-navy-deep: #06112c;
+  --uj-red: #c8102e;
+  background:
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(200, 16, 46, 0.14), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(255, 255, 255, 0.05), transparent 60%),
+    var(--uj-navy);
+}
+
+[data-brand="sherwood"] h1,
+[data-brand="sherwood"] h2,
+[data-brand="sherwood"] h3 {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+[data-brand="sherwood"] h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  line-height: 1.08;
+}
+
+[data-brand="sherwood"] .brand-hero__title {
+  text-transform: none;
+  font-weight: 900;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 0.98;
+  color: #fff;
+  text-shadow:
+    0 2px 0 var(--uj-navy-deep),
+    0 12px 36px rgba(0, 0, 0, 0.55);
+}
+
+[data-brand="sherwood"] .eyebrow {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+[data-brand="sherwood"] .eyebrow::before {
+  width: 1.5rem;
+  height: 2px;
+  background: var(--uj-red);
+  border-radius: 2px;
+}
+
+[data-brand="sherwood"] .lead,
+[data-brand="sherwood"] .hero__subtitle,
+[data-brand="sherwood"] .brand-about__block p {
+  color: #c9d2ea;
+}
+
+[data-brand="sherwood"] .brand-about__block h3 {
+  color: #fff;
+  padding-left: 0.85rem;
+  border-left: 4px solid var(--uj-red);
+}
+
+/* Header navy */
+[data-brand="sherwood"] .site-header::before,
+[data-brand="sherwood"] .site-header.is-scrolled::before,
+[data-brand="sherwood"] .site-header.is-solid::before,
+[data-brand="sherwood"] .site-header.is-open::before {
+  background: rgba(6, 17, 44, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+[data-brand="sherwood"] .site-nav__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-brand="sherwood"] .site-nav__link:hover,
+[data-brand="sherwood"] .site-nav__link[aria-current="page"] {
+  color: #fff;
+}
+
+/* Botones: rojo con contorno blanco como el escudo */
+[data-brand="sherwood"] .btn--primary {
+  --btn-bg: var(--uj-red);
+  --btn-color: #fff;
+  --btn-border: #fff;
+  --btn-hover-bg: #e0203f;
+  --btn-hover-color: #fff;
+  border-width: 2px;
+  box-shadow: 0 10px 26px rgba(200, 16, 46, 0.35);
+}
+
+[data-brand="sherwood"] .btn--outline {
+  --btn-color: #fff;
+  --btn-border: rgba(255, 255, 255, 0.75);
+  --btn-hover-bg: rgba(255, 255, 255, 0.12);
+  --btn-hover-color: #fff;
+  border-width: 2px;
+}
+
+/* Hero */
+[data-brand="sherwood"] .brand-hero {
+  background: var(--uj-navy-deep);
+}
+
+[data-brand="sherwood"] .hero__media {
+  opacity: 1;
+}
+
+[data-brand="sherwood"] .hero__media img,
+[data-brand="sherwood"] .hero__media video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: none;
+}
+
+[data-brand="sherwood"].brand-page .hero__overlay,
+[data-brand="sherwood"].brand-page.brand-hero--video .hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(6, 17, 44, 0.86) 0%, rgba(6, 17, 44, 0.5) 42%, rgba(6, 17, 44, 0.1) 100%),
+    linear-gradient(0deg, rgba(6, 17, 44, 0.6), transparent 35%);
+}
+
+[data-brand="sherwood"] .brand-hero .hero__subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  border-top-color: rgba(255, 255, 255, 0.28);
+}
+
+[data-brand="sherwood"] .brand-hero .breadcrumb,
+[data-brand="sherwood"] .brand-hero .breadcrumb a {
+  color: #fff;
+}
+
+[data-brand="sherwood"] .brand-hero__logo {
+  width: auto;
+  height: clamp(5.5rem, 10vw, 8rem);
+  max-height: none;
+  margin: 0 0 1rem;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.5));
+}
+
+/* Secciones: franja Union Jack entre bloques */
+[data-brand="sherwood"] main > section:not(.brand-hero) {
+  position: relative;
+}
+
+[data-brand="sherwood"] main > section:not(.brand-hero):not(.cta-band)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(60%, 36rem);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+}
+
+[data-brand="sherwood"] .section--surface {
+  background-color: var(--uj-navy-deep);
+  background-image: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(200, 16, 46, 0.08), transparent 70%);
+  border-block: none;
+}
+
+/* Tarjetas con silueta de escudo */
+[data-brand="sherwood"] .brand-panel,
+[data-brand="sherwood"] .lead-form,
+[data-brand="sherwood"] .contact-aside__card,
+[data-brand="sherwood"] .placeholder-note {
+  background: rgba(16, 36, 90, 0.72);
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  border-top: 5px solid var(--uj-red);
+  border-radius: 6px 6px 22px 22px;
+  color: #fff;
+}
+
+[data-brand="sherwood"] .contact-aside__label {
+  color: #ff5a6e;
+}
+
+[data-brand="sherwood"] .contact-aside__value,
+[data-brand="sherwood"] .contact-aside__value a {
+  color: #fff;
+}
+
+[data-brand="sherwood"] .benefit-list__icon {
+  border-color: var(--uj-red);
+  background: var(--uj-red);
+  color: #fff;
+}
+
+[data-brand="sherwood"] .form-field label {
+  color: #fff;
+}
+
+[data-brand="sherwood"] .form-field input,
+[data-brand="sherwood"] .form-field select,
+[data-brand="sherwood"] .form-field textarea {
+  background: rgba(6, 17, 44, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+[data-brand="sherwood"] .form-field input:focus,
+[data-brand="sherwood"] .form-field select:focus,
+[data-brand="sherwood"] .form-field textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.45);
+}
+
+/* CTA con foto del pub */
+[data-brand="sherwood"] .cta-band__media {
+  background: url("../assets/images/franchises/sherwood/header.jpg") center / cover no-repeat;
+}
+
+[data-brand="sherwood"] .cta-band__media .media-placeholder {
+  display: none;
+}
+
+[data-brand="sherwood"] .cta-band__overlay {
+  background: linear-gradient(115deg, rgba(6, 17, 44, 0.92) 0%, rgba(10, 26, 64, 0.8) 55%, rgba(200, 16, 46, 0.78) 100%);
+}
+
+[data-brand="sherwood"] .cta-band .eyebrow {
+  color: #fff;
+}
+
+/* Footer */
+[data-brand="sherwood"] .site-footer {
+  position: relative;
+  background: var(--uj-navy-deep);
+  border-top: none;
+}
+
+[data-brand="sherwood"] .site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 16, 46, 0.7), transparent);
+}
+
+[data-brand="sherwood"] .site-footer__title {
+  color: #ff5a6e;
+}
+
+/* ====================================================================== */
+/* CAPITÁN JACK — mar, blanco, naranja                                    */
+/* ====================================================================== */
+
+[data-brand="capitan-jack"] {
+  background:
+    radial-gradient(ellipse 80% 50% at 0% 0%, rgba(26, 107, 181, 0.16), transparent 50%),
+    #eef7fb;
+}
+
+[data-brand="capitan-jack"] .brand-hero__title,
+[data-brand="capitan-jack"] h2 {
+  color: #0a3a58;
+}
+
+[data-brand="capitan-jack"] .brand-hero__logo {
+  max-height: 8.5rem;
+  width: min(100%, 18rem);
+}
+
+[data-brand="capitan-jack"] .cta-band__overlay {
+  background: linear-gradient(120deg, #0a3a58, #1a6bb5 50%, #f15a24);
+}
+
+[data-brand="capitan-jack"] .brand-panel {
+  border-top-color: #1a6bb5;
+}
+
+/* ====================================================================== */
+/* KÖNIGS BIER — rojo bávaro + oro                                        */
+/* ====================================================================== */
+
+[data-brand="konigs-bier"] {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(197, 160, 40, 0.18), transparent 50%),
+    #3a0c0c;
+}
+
+[data-brand="konigs-bier"] .brand-hero__title,
+[data-brand="konigs-bier"] h2 {
+  color: #f0d789;
+}
+
+[data-brand="konigs-bier"] .brand-panel,
+[data-brand="konigs-bier"] .lead-form {
+  border: 1px solid #c5a028;
+  box-shadow: 0 0 0 4px rgba(168, 18, 18, 0.5), 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+[data-brand="konigs-bier"] .cta-band__overlay {
+  background: linear-gradient(120deg, #5a1010, #8a1a12 55%, #c5a028);
+}
+
+/* ====================================================================== */
+/* HEAVY HUNGRY — negro + rojo street                                     */
+/* ====================================================================== */
+
+[data-brand="heavy-hungry"] .brand-hero__title,
+[data-brand="heavy-hungry"] h2,
+[data-brand="tacos-atascados"] .brand-hero__title,
+[data-brand="tacos-atascados"] h2 {
+  font-weight: 400;
+  color: #ff2a2a;
+}
+
+[data-brand="heavy-hungry"] .btn--primary,
+[data-brand="tacos-atascados"] .btn--primary {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+[data-brand="heavy-hungry"] .btn--primary {
+  box-shadow: 4px 4px 0 #000, 0 0 22px var(--brand-glow);
+}
+
+[data-brand="heavy-hungry"] .brand-panel {
+  box-shadow: 6px 6px 0 #ff1a1a;
+}
+
+[data-brand="heavy-hungry"] .cta-band__overlay {
+  background: linear-gradient(120deg, #000, #7a0000);
+}
+
+/* ====================================================================== */
+/* HAI SUSHI — negro + lima                                               */
+/* ====================================================================== */
+
+[data-brand="hai-sushi"] .brand-hero {
+  box-shadow: inset 0 0 140px rgba(153, 204, 51, 0.2);
+}
+
+[data-brand="hai-sushi"] .brand-hero__title,
+[data-brand="hai-sushi"] h2 {
+  color: #99cc33;
+}
+
+[data-brand="hai-sushi"] .btn--primary,
+[data-brand="hai-sushi"] .badge {
+  border-radius: 999px;
+}
+
+[data-brand="hai-sushi"] .brand-panel,
+[data-brand="hai-sushi"] .lead-form {
+  border-color: #99cc33;
+  box-shadow: 0 0 24px rgba(153, 204, 51, 0.12);
+}
+
+[data-brand="hai-sushi"] .cta-band__overlay {
+  background: linear-gradient(120deg, #050505, #3a5514);
+}
+
+/* ====================================================================== */
+/* TACOS ATASCADOS — negro + rojo trompo                                  */
+/* ====================================================================== */
+
+[data-brand="tacos-atascados"] {
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(225, 6, 19, 0.22), transparent 45%),
+    #0c0706;
+}
+
+[data-brand="tacos-atascados"] .cta-band__overlay {
+  background: linear-gradient(120deg, #1a0806, #e10613);
+}
+
+[data-brand="tacos-atascados"] .brand-panel {
+  border-top-width: 4px;
+}
+
+/* ====================================================================== */
+/* Atmósferas: guerra / mar / café                                        */
+/* ====================================================================== */
+
+.hero__media img.is-empty {
+  display: none;
+}
+
+.brand-fx {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.brand-page .brand-hero .hero__content {
+  z-index: 3;
+}
+
+.brand-page .brand-hero .hero__product {
+  z-index: 2;
+  width: auto;
+  max-width: min(42vw, 380px);
+  max-height: min(58vh, 400px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Wings Force: guerra ---------------------------------------------- */
+
+[data-brand="wings-force"] .brand-hero {
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(196, 18, 46, 0.22), transparent 45%),
+    radial-gradient(ellipse at 80% 20%, rgba(75, 122, 50, 0.28), transparent 50%),
+    #050604;
+}
+
+[data-brand="wings-force"] .hero__overlay {
+  background: linear-gradient(90deg, rgba(5, 6, 4, 0.82) 0%, rgba(5, 6, 4, 0.28) 58%, rgba(5, 6, 4, 0.55) 100%);
+}
+
+[data-brand="wings-force"] .hero__product {
+  width: auto;
+  max-width: min(42vw, 360px);
+  max-height: min(56vh, 380px);
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.7));
+}
+
+.brand-fx__camo,
+.brand-fx__scan,
+.brand-fx__smoke,
+.brand-fx__hud {
+  position: absolute;
+  inset: 0;
+}
+
+.brand-fx__camo {
+  opacity: 0.22;
+  background-image:
+    radial-gradient(ellipse 9rem 5rem at 12% 22%, #3d5c2e 40%, transparent 42%),
+    radial-gradient(ellipse 11rem 6rem at 78% 38%, #243318 40%, transparent 42%),
+    radial-gradient(ellipse 8rem 5rem at 38% 72%, #5a3a22 40%, transparent 42%),
+    radial-gradient(ellipse 10rem 4.5rem at 62% 18%, #2e4a24 40%, transparent 42%),
+    repeating-linear-gradient(-32deg, transparent 0 16px, rgba(196, 18, 46, 0.12) 16px 18px);
+}
+
+.brand-fx__scan {
+  opacity: 0.28;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent 0 3px,
+    rgba(0, 0, 0, 0.35) 3px 4px
+  );
+  animation: brand-scan 9s linear infinite;
+}
+
+.brand-fx__smoke {
+  background:
+    radial-gradient(ellipse 40% 30% at 80% 110%, rgba(120, 120, 110, 0.35), transparent 70%),
+    radial-gradient(ellipse 30% 24% at 20% 120%, rgba(80, 90, 70, 0.28), transparent 70%);
+  animation: brand-smoke 12s ease-in-out infinite;
+}
+
+.brand-fx__hud {
+  inset: 1.1rem;
+  border: 2px solid rgba(75, 122, 50, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(196, 18, 46, 0.4);
+  clip-path: polygon(0 18px, 18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+@keyframes brand-scan {
+  from { background-position: 0 0; }
+  to { background-position: 0 80px; }
+}
+
+@keyframes brand-smoke {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-18px) scale(1.06); opacity: 1; }
+}
+
+/* --- Capitán Jack: mar ------------------------------------------------ */
+
+[data-brand="capitan-jack"] .brand-hero {
+  background: linear-gradient(180deg, #063552 0%, #0b6a96 42%, #14a0c4 78%, #7ad4e8 100%);
+  color: #fff;
+}
+
+[data-brand="capitan-jack"] .hero__overlay {
+  background: linear-gradient(90deg, rgba(6, 40, 62, 0.55) 0%, rgba(6, 40, 62, 0.12) 60%, transparent 100%);
+}
+
+[data-brand="capitan-jack"] .brand-hero .hero__title,
+[data-brand="capitan-jack"] .brand-hero .breadcrumb,
+[data-brand="capitan-jack"] .brand-hero .breadcrumb a {
+  color: #fff;
+}
+
+[data-brand="capitan-jack"] .brand-hero .hero__subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  border-top-color: rgba(255, 255, 255, 0.28);
+}
+
+[data-brand="capitan-jack"] .brand-hero .eyebrow {
+  color: #ffb089;
+}
+
+[data-brand="capitan-jack"] .brand-hero .eyebrow::before {
+  background: #f15a24;
+}
+
+[data-brand="capitan-jack"] .brand-hero .btn--outline {
+  --btn-color: #fff;
+  --btn-border: rgba(255, 255, 255, 0.75);
+  --btn-hover-bg: rgba(255, 255, 255, 0.12);
+  --btn-hover-color: #fff;
+}
+
+[data-brand="capitan-jack"] .hero__product {
+  width: auto;
+  max-width: min(42vw, 360px);
+  max-height: min(56vh, 380px);
+  filter: drop-shadow(0 22px 36px rgba(0, 40, 70, 0.45));
+}
+
+.brand-fx__caustics {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background:
+    radial-gradient(ellipse 18rem 8rem at 20% 30%, rgba(255, 255, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse 14rem 7rem at 70% 55%, rgba(180, 240, 255, 0.18), transparent 60%);
+  animation: brand-caustics 10s ease-in-out infinite;
+}
+
+.brand-fx__bubble {
+  position: absolute;
+  bottom: -2rem;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(var(--s, 1));
+  animation: brand-bubble linear infinite;
+}
+
+.brand-fx__waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 28%;
+}
+
+.brand-fx__waves span {
+  position: absolute;
+  left: -15%;
+  width: 130%;
+  height: 160px;
+  border-radius: 48% 52% 48% 52%;
+  animation: brand-wave 9s ease-in-out infinite;
+}
+
+.brand-fx__waves span:nth-child(1) {
+  bottom: -50px;
+  background: rgba(255, 255, 255, 0.18);
+  animation-duration: 7s;
+}
+
+.brand-fx__waves span:nth-child(2) {
+  bottom: -70px;
+  background: rgba(10, 80, 120, 0.28);
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+
+.brand-fx__waves span:nth-child(3) {
+  bottom: -90px;
+  background: rgba(6, 53, 82, 0.45);
+  animation-duration: 13s;
+  animation-delay: -4s;
+}
+
+@keyframes brand-bubble {
+  0% { transform: translate3d(0, 0, 0) scale(var(--s, 1)); opacity: 0; }
+  12% { opacity: 0.75; }
+  100% { transform: translate3d(18px, -110vh, 0) scale(var(--s, 1)); opacity: 0; }
+}
+
+@keyframes brand-wave {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(-6%) rotate(3deg); }
+}
+
+@keyframes brand-caustics {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.28; }
+  50% { transform: translate(4%, -3%) scale(1.08); opacity: 0.45; }
+}
+
+/* --- Divino Cielo: café elegante -------------------------------------- */
+
+[data-brand="divino-cielo"] .brand-hero {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% -10%, rgba(0, 174, 239, 0.16), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f3fbff 100%);
+}
+
+[data-brand="divino-cielo"] .hero__overlay {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.12) 70%, transparent 100%);
+}
+
+[data-brand="divino-cielo"] .hero__product {
+  width: auto;
+  max-width: min(34vw, 280px);
+  max-height: min(50vh, 320px);
+  filter: drop-shadow(0 24px 40px rgba(18, 48, 68, 0.16));
+  animation: brand-float 8s ease-in-out infinite;
+}
+
+.brand-fx__haze {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 40%, rgba(0, 174, 239, 0.1), transparent 55%);
+}
+
+.brand-fx__steam {
+  position: absolute;
+  right: 14%;
+  bottom: 38%;
+  width: 90px;
+  height: 180px;
+  background:
+    radial-gradient(ellipse at 40% 80%, rgba(180, 220, 235, 0.45), transparent 70%),
+    radial-gradient(ellipse at 60% 50%, rgba(200, 230, 240, 0.35), transparent 70%);
+  filter: blur(16px);
+  animation: brand-steam 7s ease-in-out infinite;
+}
+
+.brand-fx__mote {
+  position: absolute;
+  bottom: 10%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 174, 239, 0.35);
+  animation: brand-mote linear infinite;
+}
+
+@keyframes brand-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes brand-steam {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.35; }
+  50% { transform: translateY(-24px) scale(1.15); opacity: 0.7; }
+}
+
+@keyframes brand-mote {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 0.7; }
+  100% { transform: translateY(-70vh); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-fx__scan,
+  .brand-fx__smoke,
+  .brand-fx__bubble,
+  .brand-fx__waves span,
+  .brand-fx__caustics,
+  .brand-fx__steam,
+  .brand-fx__mote,
+  [data-brand="divino-cielo"] .hero__product {
+    animation: none !important;
+  }
+}
+
+.brand-hero--photo .hero__media {
+  opacity: 1;
+}
+
+.brand-hero--photo .hero__overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 7, 12, 0.74) 0%,
+    rgba(5, 7, 12, 0.4) 42%,
+    rgba(5, 7, 12, 0.08) 100%
+  );
+}
+
+.brand-hero--photo .brand-hero .hero__title,
+.brand-hero--photo .brand-hero .hero__subtitle,
+.brand-hero--photo .brand-hero .eyebrow {
+  color: #f6efe2;
+}
+
+.brand-page.brand-hero--video .hero__media,
+.brand-page--light.brand-hero--video .hero__media,
+.brand-page--dark.brand-hero--video .hero__media {
+  opacity: 1;
+}
+
+.brand-page.brand-hero--video .hero__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: none;
+}
+
+.brand-page.brand-hero--video .hero__overlay,
+.brand-page--light.brand-hero--video .hero__overlay,
+.brand-page--dark.brand-hero--video .hero__overlay,
+[data-brand="divino-cielo"].brand-hero--video .hero__overlay,
+[data-brand="capitan-jack"].brand-hero--video .hero__overlay,
+[data-brand="wings-force"].brand-hero--video .hero__overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 7, 12, 0.74) 0%,
+    rgba(5, 7, 12, 0.38) 40%,
+    rgba(5, 7, 12, 0.06) 100%
+  );
+}
+
+.brand-page.brand-hero--video .brand-hero .hero__title,
+.brand-page.brand-hero--video .brand-hero .hero__subtitle,
+.brand-page.brand-hero--video .brand-hero .eyebrow,
+.brand-page.brand-hero--video .brand-hero .breadcrumb,
+.brand-page.brand-hero--video .brand-hero .breadcrumb a,
+.brand-page--light.brand-hero--video .brand-hero .hero__title,
+.brand-page--light.brand-hero--video .brand-hero .hero__subtitle,
+.brand-page--light.brand-hero--video .brand-hero .eyebrow {
+  color: #f6efe2;
+}
+
+.brand-page.brand-hero--video .brand-hero .hero__subtitle {
+  color: rgba(246, 239, 226, 0.86);
+  border-top-color: rgba(246, 239, 226, 0.28);
+}
+
+.brand-page.brand-hero--video .brand-hero .btn--outline,
+.brand-page--light.brand-hero--video .btn--outline {
+  --btn-color: #f6efe2;
+  --btn-border: rgba(246, 239, 226, 0.7);
+  --btn-hover-bg: rgba(246, 239, 226, 0.12);
+  --btn-hover-color: #fff;
+}
+
+/* ¿Qué somos? — layout de las páginas oficiales */
+.brand-about__grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+.brand-about__title {
+  margin: 0.15rem 0 1rem;
+}
+
+.brand-about__copy .lead {
+  margin-bottom: 0.4rem;
+}
+
+.brand-about__block {
+  margin-top: 1.2rem;
+}
+
+.brand-about__block h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.12rem;
+  letter-spacing: 0.01em;
+}
+
+.brand-about__block p {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.brand-about__thumbs[hidden] {
+  display: none;
+}
+
+.brand-about__thumbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+.brand-about__thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.28);
+}
+
+.brand-about__thumb::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  z-index: 0;
+  background: var(--thumb-img) center / cover no-repeat;
+  filter: blur(22px) brightness(0.55) saturate(1.1);
+}
+
+.brand-about__thumbs img,
+.brand-about__thumbs .brand-about__thumb img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  border-radius: 0;
+  filter: none;
+}
+
+.brand-about__feature {
+  margin: 0;
+  background: transparent;
+  border-radius: 18px;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: min(60vh, 460px);
+  max-height: min(60vh, 460px);
+}
+
+.brand-about__feature img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: min(60vh, 460px);
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 960px) {
+  .brand-about__grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 2.4rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 959px) {
+  .brand-about__feature {
+    height: min(42vh, 320px);
+    max-height: min(42vh, 320px);
+  }
+
+  .brand-about__feature img {
+    max-height: min(42vh, 320px);
+  }
+
+}
+
+.brand-page--light .brand-about__feature {
+  background: transparent;
+}
+
+/* Galería de marca: celdas iguales, cada foto completa */
+.brand-page .gallery-editorial {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: none;
+  gap: 0.85rem;
+}
+
+.brand-page .gallery-editorial__item,
+.brand-page .gallery-editorial__item:nth-child(n) {
+  position: relative;
+  grid-column: auto;
+  grid-row: auto;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-radius: 14px;
+  box-shadow: none;
+  opacity: 1;
+  transform: none;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.brand-page .gallery-editorial__item::before {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  z-index: 0;
+  background: var(--gallery-img) center / cover no-repeat;
+  filter: blur(22px) brightness(0.55) saturate(1.1);
+}
+
+.brand-page .gallery-editorial__item img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  filter: none;
+}
+
+@media (min-width: 640px) {
+  .brand-page .gallery-editorial {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-page .gallery-editorial {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.brand-page .gallery-editorial__item:hover,
+.brand-page .gallery-editorial__item.is-tilting {
+  box-shadow: none;
+}
+
+.brand-page .gallery-editorial__caption {
+  display: none;
+}
+
+.brand-about__feature img {
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 767px) {
+  .brand-page .brand-hero .hero__product,
+  [data-brand="wings-force"] .hero__product,
+  [data-brand="capitan-jack"] .hero__product,
+  [data-brand="divino-cielo"] .hero__product {
+    max-width: min(46vw, 200px);
+    max-height: min(34vh, 200px);
+  }
+}

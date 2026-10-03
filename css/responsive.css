@@ -1,0 +1,216 @@
+/* ==========================================================================
+   Responsive — Magno Corporate Red/Blue
+   ========================================================================== */
+
+@media (min-width: 480px) {
+  .trust-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-editorial {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-editorial__item:first-child,
+  #experiencia .gallery-editorial__item:last-child:nth-child(even) {
+    grid-column: 1 / -1;
+    min-height: 18rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header__cta {
+    display: inline-flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .carousel__track {
+    grid-auto-columns: calc(50% - var(--space-5) / 2);
+  }
+
+  .franchise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-section {
+    grid-template-columns: 1.25fr 0.85fr;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+
+  .about-split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .timeline {
+    gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel__track {
+    grid-auto-columns: calc(25% - (var(--space-5) * 3 / 4));
+  }
+
+  .franchise-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .gallery-editorial {
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(2, minmax(12rem, 18rem)) minmax(12rem, 16rem);
+  }
+
+  #experiencia .gallery-editorial__item:last-child:nth-child(even) {
+    grid-column: auto;
+    min-height: 14rem;
+  }
+
+  .gallery-editorial__item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .gallery-editorial__item:nth-child(2) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .gallery-editorial__item:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .gallery-editorial__item:nth-child(4) {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .hero__content {
+    padding-bottom: 5.5rem;
+  }
+
+  .site-header__logo-img {
+    height: 3.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mega-menu {
+    width: min(90vw, 74rem);
+  }
+
+  .feature-grid {
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 767px) {
+  .mega-menu {
+    display: none;
+  }
+
+  .btn-group {
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    flex: 1 1 auto;
+    min-width: min(100%, 10rem);
+  }
+
+  .franchise-showcase__toolbar {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .hero {
+    min-height: auto;
+    align-items: end;
+  }
+
+  .hero__content {
+    padding-block: calc(var(--header-h) + 2.25rem) 3rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.95rem, 8vw, 2.45rem);
+    max-width: 16ch;
+  }
+
+  .hero__subtitle {
+    font-size: var(--fs-sm);
+  }
+
+  .section {
+    padding-block: clamp(3.25rem, 9vw, 4.5rem);
+  }
+
+  h2,
+  .heading-2 {
+    font-size: clamp(1.65rem, 6.5vw, 2.1rem);
+  }
+
+  .brand-hero {
+    min-height: 88vh;
+    min-height: 88svh;
+  }
+
+  .site-header__logo-img {
+    height: 2.4rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero__title {
+    font-size: clamp(1.85rem, 8.5vw, 2.2rem);
+  }
+
+  .whatsapp-float {
+    right: 0.85rem;
+    bottom: 0.85rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container-xl: 84rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --container-xl: 90rem;
+  }
+}
