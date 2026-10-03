@@ -18,9 +18,21 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .site-header__cta {
     display: inline-flex;
+    margin-left: auto;
+    margin-right: 0.75rem;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .site-header__cta {
+    margin: 0;
   }
 
   .nav-toggle {
@@ -35,6 +47,27 @@
     display: none;
   }
 
+  .site-nav__link {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .site-nav {
+    gap: 0.1rem;
+  }
+
+  .site-nav__link {
+    padding-inline: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .site-header__cta {
+    padding-inline: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
   .carousel__track {
     grid-auto-columns: calc(50% - var(--space-5) / 2);
   }
@@ -43,30 +76,16 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .form-row--2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .form-section {
-    grid-template-columns: 1.25fr 0.85fr;
-    align-items: center;
-    gap: clamp(2rem, 4vw, 3.5rem);
-  }
-
-  .site-footer__grid {
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  .contact-aside {
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   }
 
   .about-split {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .trust-bar__grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 
   .timeline {
@@ -75,6 +94,24 @@
 }
 
 @media (min-width: 1024px) {
+  .form-section {
+    grid-template-columns: 1.25fr 0.85fr;
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .contact-aside {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+
+  .trust-bar__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .carousel__track {
     grid-auto-columns: calc(25% - (var(--space-5) * 3 / 4));
   }
@@ -83,9 +120,6 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .feature-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
 
   .gallery-editorial {
     grid-template-columns: repeat(4, 2fr);
@@ -136,10 +170,13 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1099px) {
   .mega-menu {
     display: none;
   }
+}
+
+@media (max-width: 767px) {
 
   .btn-group {
     width: 100%;
@@ -212,5 +249,129 @@
 @media (min-width: 1920px) {
   :root {
     --container-xl: 90rem;
+  }
+}
+
+/* "Por que invertir": 2 / 3+2 / 5 columnas sin huerfanas */
+@media (min-width: 560px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 900px) {
+  .feature-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .feature-grid > * {
+    grid-column: span 2;
+  }
+
+  .feature-grid > :nth-child(4),
+  .feature-grid > :nth-child(5) {
+    grid-column: span 3;
+  }
+
+  .feature-grid > :last-child:nth-child(odd) {
+    grid-column: span 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .feature-grid > *,
+  .feature-grid > :nth-child(4),
+  .feature-grid > :nth-child(5),
+  .feature-grid > :last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+
+/* Galeria del inicio en movil y tablet: cuadricula compacta */
+@media (max-width: 1023px) {
+  #experiencia .gallery-editorial {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  #experiencia .gallery-editorial__item {
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  #experiencia .gallery-editorial__item:first-child,
+  #experiencia .gallery-editorial__item:last-child:nth-child(even) {
+    grid-column: 1 / -1;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  #experiencia .gallery-editorial__item img {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+/* Pilares en movil: 2 columnas compactas */
+@media (max-width: 479px) {
+  .trust-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .trust-card {
+    padding: 1.1rem 0.95rem;
+  }
+
+  .trust-card__label {
+    font-size: 0.98rem;
+  }
+
+  .trust-card__text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+/* Telefonos muy angostos */
+@media (max-width: 360px) {
+  .trust-bar__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  #experiencia .gallery-editorial {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #experiencia .gallery-editorial__item {
+    aspect-ratio: 4 / 3;
+  }
+
+  #experiencia .gallery-editorial__item:first-child,
+  #experiencia .gallery-editorial__item:last-child:nth-child(even) {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+.contact-aside__value,
+.contact-aside__value a,
+.site-footer__links a {
+  overflow-wrap: anywhere;
+}
+
+/* Tarjetas de franquicias del inicio en movil: foto mas horizontal */
+@media (max-width: 639px) {
+  .franchise-card__media {
+    aspect-ratio: 16 / 10;
   }
 }
